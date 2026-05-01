@@ -1,7 +1,17 @@
 import math
 
 def biseccion(f, a, b, epsilon, delta):
-    # Verificamos la condición inicial
+    """Encuentra la raíz de una funcion utilizando el
+     método de bisección. El parametro f es la función;
+      a y b son los extremos del intervalo dónde buscaremos
+       la raíz; epsilon es la longitud máxima permitida
+       del ultimo intervalo o en otras palabras el margen de
+       error en las absisas y delta es el margen de error 
+       en la ordenadas o imagenes.
+       Primero verificamos que la función cruce el eje de
+       las absisas mediante el producto: f(a)*f(b). Luego
+       hacemos que la función se detenga cuando alcance 
+       cierto margen de error de error preestablecido"""
     if f(a) * f(b) < 0:
         # Iniciamos el bucle: mientras el intervalo sea mayor a epsilon
         # o el valor de la función no sea lo suficientemente cercano a cero
